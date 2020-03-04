@@ -1,0 +1,68 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/member.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Planning Poker</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Join a game</a></li>
+        <li><a href="dealer.html">Host a game</a></li>
+        <li><a href="https://github.com/alexellis/PlanningPoker">Github</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div class="container"> 
+	<h3>Join a poker game</h3>
+	<section id="status">
+		<div id="enterName">
+			<p><label for="myName">Enter your name:</label> <input type="text" id="myName" value=""></input>
+			&nbsp;<button id="join">Join</button></p>
+		</div>
+		<div id="waitingStart">Waiting for the host to send a user story.</div>
+	</section>
+
+	<div id="gamePlay">
+			<p>Story: <span id="storyName">Not started yet</span></p>
+		<p>Pick your card:</p>
+		<div id="cards" class="cards">
+			<div id="card1" class="card">1</div>
+			<div id="card2" class="card">2</div>
+			<div id="card3" class="card">3</div>
+			<div id="card4" class="card">5</div>
+			<div id="card5" class="card">8</div>
+			<div id="card6" class="card">13</div>
+			<div id="card7" class="card">20</div>
+			<div id="card8" class="card">40</div>
+			<div id="card9" class="card">100</div>
+		</div>
+
+		<input type="button" id="layCard" value="Lay card"></input>
+		<p>Points in by team: </p>
+		<div id="cardResults" class="cards">
+
+		</div>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/*body{
+    font-family:Helvetica;
+}
+*/
+.cards{
+	margin-bottom: 10px;
+}
+.card{
+	display: inline-block;
+	border-width: 1px;
+	font-size: 18pt;
+	border-style: dashed;
+	padding: 10px 10px 10px 10px;
+}
+.hover-card {
+	background-color: yellow;
+}
+
+#storyEdit {
+	margin-left:0px;
+	margin-right:0px;
+	font-size: 16px;
+	background-color: #efefef;
+}
+
+#storyCaption {
+	font-size: 16px;
+	width: 400px;
+}

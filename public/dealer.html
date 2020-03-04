@@ -1,0 +1,100 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/dealer.js"></script>
+
+	<style>
+			.sidebar-unslid {
+				position:absolute;
+				margin-right: 30px;
+				left: -150px;
+				float: none;
+			}
+			.sidebar-slid {
+				position: relative;
+				float: left;
+				margin-right: 30px;
+				left: -0px;
+			}
+	</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse ">
+	<div class="container">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+      <a class="navbar-brand" href="index.html">Planning Poker</a>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse">
+	  <ul class="nav navbar-nav">
+	    <li><a href="join.html">Join a game</a></li>
+	    <li class="active"><a href="#">Host a game</a></li>
+	    <li><a href="http://github.com/alexellis/">Github</a></li>
+	  </ul>
+	</div><!--/.nav-collapse -->
+	</div>
+</nav>
+
+<div class="container-fluid"> 
+	<section id="connected-parties" class="sidebar-unslid" style="border-radius: 6px;background-color: #eee; padding: 10px 20px 10px 20px;">
+		<p>Connections:
+		<ul id="connected-parties-list">
+
+		</ul>
+		</p>
+	</section>
+
+	<section style="overflow:hidden">
+	<div class="jumbotron">
+	<h3>You are the host</h3>
+	<div id="gameStartForm">
+		Enter a name for the game:
+		<div>
+			<label for="gameName">Name:</label>
+			<input id="gameName" name="gameName"></input>
+			<button id="startGame">Start Game</button>
+		</div>
+	</div>
+	<div id="gameInstructions">
+		You are hosting a game, enter the stories in the text box below and click start.
+	</div>
+</div>
+<section id="playArea">
+	<div >
+        <span id="storyCaption">Story:</span> 
+        <div id="storyEdit" contentEditable="true">New story</div>
+	</div>
+	<div style="padding-top:20px; padding-bottom:20px;">
+		<input type="button" id="play" value="Play"></input>
+	</div>
+	<p>Points in:</p>
+	<div id="pointsIn">
+		
+	</div>
+	<div>
+		<p>Responders</p>
+		<ul id="pointsInByPlayer">
+
+		</ul>
+
+		<input type="button" id="showCards" value="Show cards"></input>
+	</div>
+
+	</section>
+</section>
+</div>
+</body>
+</html>
+

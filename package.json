@@ -1,0 +1,13 @@
+{
+ "url": "https://github.com/alexellis/PlanningPoker",
+ "email": "alexellis2@gmail.com",
+ "description": "Planning Poker for distributed Agile SCRUM teams",
+ "main": "app.js",
+ "dependencies": {
+  "express": "latest",
+  "socket.io": "latest"
+ },
+ "scripts": {
+    "start": "node app.js"
+  }
+}
