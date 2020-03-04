@@ -35,6 +35,10 @@ Instructions are provided on how to play on the homepage.
 * Each player picks a t-shirt size estimation card
 * Then the dealer hits "send cards" and all the team see the cards
 
+![Demo](https://pbs.twimg.com/media/ESRsUovXYAInZ7S?format=png&name=900x900)
+
+See [a demo in this Twitter thread](https://twitter.com/alexellisuk/status/1235231762701340676)
+
 ### Invite the team
 
 If you would like to know what IP address to give to your team-mates you can find it with `ipconfig` on windows and `ifconfig` on most Mac/Linux machines.
